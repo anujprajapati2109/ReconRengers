@@ -1,0 +1,89 @@
+/* VPN System Styles */
+.vpn-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.vpn-connected {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.vpn-disconnected {
+    color: #f44336;
+    font-weight: bold;
+}
+
+.btn-vpn {
+    background: linear-gradient(135deg, #2196F3, #1976D2);
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-vpn:hover {
+    background: linear-gradient(135deg, #1976D2, #1565C0);
+    transform: translateY(-1px);
+}
+
+.btn-vpn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.vpn-selection {
+    padding: 20px;
+}
+
+.server-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.server-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    background: rgba(0, 123, 255, 0.1);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.server-item:hover {
+    background: rgba(0, 123, 255, 0.2);
+    border-color: #007bff;
+    transform: translateY(-2px);
+}
+
+.server-flag {
+    font-size: 20px;
+}
+
+.server-name {
+    flex: 1;
+    font-weight: 500;
+    color: #333;
+}
+
+.server-ping {
+    color: #666;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 2px 8px;
+    border-radius: 10px;
+}

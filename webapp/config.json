@@ -1,0 +1,22 @@
+{
+  "app": {
+    "name": "AnujScan Pro Ultimate",
+    "version": "3.0",
+    "description": "Advanced Cybersecurity Suite"
+  },
+  "features": {
+    "vulnerability_scanner": true,
+    "attack_simulator": true,
+    "security_analyzer": true
+  },
+  "security": {
+    "max_scan_time": 30000,
+    "max_attack_duration": 60000,
+    "rate_limit": 100
+  },
+  "ui": {
+    "theme": "dark",
+    "animations": true,
+    "notifications": true
+  }
+}

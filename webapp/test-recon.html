@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Reconnaissance</title>
+    <style>
+        .results { background: #000; color: #0f0; padding: 20px; font-family: monospace; }
+        .btn { padding: 10px 20px; margin: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Test Reconnaissance</h1>
+    <input type="text" id="reconTarget" value="example.com" placeholder="Target domain">
+    <br><br>
+    <button class="btn" onclick="testRecon()">🔍 Test Recon</button>
+    <br><br>
+    <div id="reconResults" class="results">Ready to test...</div>
+
+    <script>
+        function logMessage(elementId, message) {
+            const element = document.getElementById(elementId);
+            const time = new Date().toLocaleTimeString();
+            element.innerHTML += `[${time}] ${message}<br>`;
+            element.scrollTop = element.scrollHeight;
+        }
+
+        function clearResults(elementId) {
+            document.getElementById(elementId).innerHTML = '';
+        }
+
+        function testRecon() {
+            const target = document.getElementById('reconTarget').value;
+            console.log('Testing recon for:', target);
+            
+            clearResults('reconResults');
+            logMessage('reconResults', '🔍 STARTING TEST RECONNAISSANCE');
+            logMessage('reconResults', `Target: ${target}`);
+            
+            // Simple test
+            setTimeout(() => {
+                logMessage('reconResults', '✅ DNS Lookup test...');
+                fetch(`https://dns.google/resolve?name=${target}&type=A`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.Answer) {
+                            data.Answer.forEach(record => {
+                                logMessage('reconResults', `✅ Found IP: ${record.data}`);
+                            });
+                        } else {
+                            logMessage('reconResults', '❌ No DNS records found');
+                        }
+                        logMessage('reconResults', '🎯 TEST COMPLETE');
+                    })
+                    .catch(error => {
+                        logMessage('reconResults', `❌ Error: ${error.message}`);
+                    });
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

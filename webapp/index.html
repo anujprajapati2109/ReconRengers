@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnujScan Pro Ultimate - Cybersecurity Suite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/enhanced.css">
+    <link rel="stylesheet" href="css/nihar-intelligence.css">
+    <link rel="stylesheet" href="css/findings.css">
+    <link rel="stylesheet" href="css/vpn.css">
+</head>
+<body>
+    <div class="header">
+        <h1>⚔️ AnujScan Pro Ultimate - Cybersecurity Suite</h1>
+        <p>Advanced Vulnerability Scanner • Attack Simulator • AI Security Analyzer</p>
+        <div class="vpn-status">
+            <span id="vpnStatus" class="vpn-disconnected">🔴 VPN: Disconnected</span>
+            <button id="vpnToggle" class="btn-vpn" onclick="toggleVPN()">Connect VPN</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('recon')">⚔️ Attack Phase</div>
+            <div class="tab" onclick="showTab('vuln')">🕵️ Reconnaissance</div>
+            <div class="tab" onclick="showTab('analyzer')">🛡️ Security Analyzer</div>
+        </div>
+
+        <!-- Attack Phase Tab -->
+        <div id="recon" class="tab-content active">
+            <div class="grid">
+                <div>
+                    <div class="card">
+                        <div class="card-header">⚔️ Attack Target</div>
+                        <div class="card-body">
+                            <input type="text" id="attackTarget" placeholder="Enter target URL (e.g., https://example.com)" value="https://example.com">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">⚔️ Attack Arsenal</div>
+                        <div class="card-body">
+                            <button class="btn btn-danger" onclick="startSQLInjection()">💉 SQL Injection Attack</button>
+                            <button class="btn btn-success" onclick="startBruteForce()">🔑 Brute Force Attack</button>
+                            <button class="btn btn-warning" onclick="startXSSLauncher()">💻 XSS Payload Launcher</button>
+                            <button class="btn btn-dark" onclick="startDOSAttack()">💥 DOS Attack</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card-header">⚔️ Attack Results</div>
+                        <div class="card-body">
+                            <div id="attackResults" class="results">Select an attack method to begin...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reconnaissance Tab -->
+        <div id="vuln" class="tab-content">
+            <div class="grid">
+                <div>
+                    <div class="card">
+                        <div class="card-header">🎯 Target Input</div>
+                        <div class="card-body">
+                            <input type="text" id="reconTarget" placeholder="Enter target domain (e.g., example.com)" value="example.com">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">🕵️ Reconnaissance Mode</div>
+                        <div class="card-body">
+                            <div class="recon-modes">
+                                <button class="btn btn-info" onclick="startRecon('passive')">👁️ Passive Recon</button>
+                                <button class="btn btn-warning" onclick="startRecon('active')">🎯 Active Recon</button>
+                            </div>
+                            <div class="recon-info">
+                                <p><strong>Passive:</strong> Safe reconnaissance using public data sources</p>
+                                <p><strong>Active:</strong> Direct target interaction and vulnerability assessment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card-header">📈 Reconnaissance Results</div>
+                        <div class="card-body">
+                            <div id="reconResults" class="results">Click a reconnaissance mode above to start scanning...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security Analyzer Tab -->
+        <div id="analyzer" class="tab-content">
+            <div class="grid">
+                <div>
+                    <div class="card">
+                        <div class="card-header">🔍 URL Threat Monitor</div>
+                        <div class="card-body">
+                            <input type="text" id="threatTarget" placeholder="Enter URL to monitor (e.g., https://example.com)">
+                            <button class="btn btn-danger" onclick="startThreatMonitoring()">🔍 Monitor Threats</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">🎓 Pentest Training</div>
+                        <div class="card-body">
+                            <button class="btn btn-success" onclick="startPentestTraining()">🎓 Launch Training Session</button>
+                            <p><strong>Includes:</strong> TryHackMe & Hack The Box integration</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card">
+                        <div class="card-header">📈 Analysis Results</div>
+                        <div class="card-body">
+                            <div id="analysisResults" class="results">Select an analysis option to begin...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/nihar-intelligence-engine.js"></script>
+    <script src="js/accurate-data-cache.js"></script>
+    <script src="js/realistic-security-data.js"></script>
+    <script src="js/live-recon-integration.js"></script>
+    <script src="js/url-threat-monitor.js"></script>
+    <script src="js/pentest-training.js"></script>
+    <script src="js/analyzer-functions.js"></script>
+    <script src="js/live-osint-scanner.js"></script>
+    <script src="js/professional-scanner.js"></script>
+    <script src="js/advanced-sql-injection.js"></script>
+    <script src="js/git-osint-framework.js"></script>
+    <script src="js/advanced-passive-recon.js"></script>
+    <script src="js/advanced-active-recon.js"></script>
+    <script src="js/intelligent-popup.js"></script>
+    <script src="js/report-generator.js"></script>
+    <script src="js/vulnerability.js"></script>
+    <script src="js/vpn-system.js"></script>
+    <script src="js/attack-arsenal.js"></script>
+    <script src="js/attack-summary.js"></script>
+    <script src="js/analyzer.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
